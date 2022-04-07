@@ -2,11 +2,14 @@ this is index
 
 *this is italicized* 
 
+*this is pikachu*
+
 **this is bold**
 
-#this is heading 1
+**Pikachu! I choose you**
 
-##this is heading 2
+# this is heading 1
+## this is heading 2
 
 
 [Link](https://canvas.ucsd.edu/courses/35489) 
@@ -34,4 +37,6 @@ code block
 code block 
 
 ```
+
+
 
