@@ -1,11 +1,19 @@
 this is index 
 
 *this is italicized* 
+
 **this is bold**
+
 #this is heading 1
+
 ##this is heading 2
+
+
 [Link](https://canvas.ucsd.edu/courses/35489) 
+
 ![Image](https://pngimg.com/image/30524)
+
+
 > this is a blockquote 
 
 * List 1
