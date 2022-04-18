@@ -21,7 +21,7 @@ Let's begin!
 
 The first step to complete is to install a source code editor. We will be using VSCode. If you already have it, then you can skip this step. Otherwise, please go to the following website and downlowd the VSCode that matches your operating system. It's compatible with MacOs, Windows, and Linux so everyone should be able to download it without any problem. 
 
->https://code.visualstudio.com/download
+[Link](https://code.visualstudio.com/download)
 
 Once downloaded, open VSCode. It should look something similar to this. Congrats with finishing the first step. 
 
@@ -38,7 +38,8 @@ Now, with VSCode installed, we can begin the second step, which is remotely conn
 
 Note: If you are a Windows user, you must install OpenSSH. Follow the link below: 
 
->https://docs.microsoft.com/en-us/windows-server/administration/openssh/openssh_install_firstuse
+
+[Link](https://docs.microsoft.com/en-us/windows-server/administration/openssh/openssh_install_firstuse)
 
 For MacOs, Linux, and Windows (after installing OpenSSH), open the terminal in VSCode. To do so, look at the menu bar (the thin bar on the very top of a computer's screen, usually containing the word, 'File Edit...'), where you should see an option for *Terminal*. Click on *Terminal* and then select the *New Terminal*. Afterwards, type in the follow command. 
 
@@ -49,7 +50,7 @@ For MacOs, Linux, and Windows (after installing OpenSSH), open the terminal in V
 
 Replace the *** with the letters specific to your own account. If you don't know your account for CSE 15L, you can look it up on the following website: 
 
->https://sdacs.ucsd.edu/~icc/index.php
+[Link](https://sdacs.ucsd.edu/~icc/index.php)
 
 If additional messages appear asking if you want to confirm your attempt to connect, say yes. Otherwise, it would prompt you for a password. When you type, nothing will appear. That is normal since it's part of an encryption designed to keep your password safe. Finish typing your password and press enter/return. 
 
