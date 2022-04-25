@@ -1,6 +1,31 @@
 
-## **Accessing ieng6 Account Tutorial** 
+## **Lab Report 2** 
 
 --- 
 
+In this lab report, I will introduce the code changes made to the MarkdownParse file in order for three test files that did not originally pass the code in MarkdownParse to pass. We will be analyzing the three bugs and the their subsequent solution. 
+
+--------
+
+### First Bug and First Solution ###
+
+
+
+![Image](labreport2firstpic.png)
+
+------
+
+### Second Bug and Second Solution ### 
+
+The second bug concerns the code looking and returning the name of an image, even though the code was designed to only identify links. 
+
+Test file of the 'image' bug: [Link](https://github.com/Wei-Ji-Chen/markdown-parser/blob/main/test4-file.md)
+
+![Image](labreport2secondpic.png)
+
+
+
+--------
+
+### Third Bug and Third Solution ### 
 
