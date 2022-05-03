@@ -55,7 +55,7 @@ The changes in the code made to fix the bug causing the FII to not run successfu
 
 ![Image](labreport2secondpic.png)
 
-The failure inducing input in this case is an image, specifically concering the coding syntax of inserting an image. The link to the test file contains the code that inserts an image in the file. The original MarkdownParse file doesn't check for the exclamation mark "!", which indicates the code for inserting an image. This is the bug. Thus, it returns the output "(https://something.com, https://www.pngitem.com/so/pikachu/)", because the MarkdownParse code is reading that as if it's a link. Therefore, this shows the code is unable to differentiate between code written for links and code written for an image. Thus, in order to fix this, an if statement is written to check for the exclamation mark before the "[" printing to ensure that the link is not for an image. This way, if it detects the "!", the loop breaks, otherwise, it continues. 
+The failure inducing input in this case is an image, specifically concerning the coding syntax of inserting an image. The link to the test file contains the code that inserts an image in the file. The original MarkdownParse file doesn't check for the exclamation mark "!", which indicates the code for inserting an image. This is the bug. Thus, it returns the output "[https://something.com, https://www.pngitem.com/so/pikachu/]", the symptom, because the MarkdownParse code is reading that as if it's a link. Therefore, this shows the code is unable to differentiate between code written for links and code written for an image. Thus, in order to fix this, an if statement is written to check for the exclamation mark before the "[" printing to ensure that the link is not for an image. This way, if it detects the "!", the loop breaks, otherwise, it continues. 
 
 --------
 
@@ -83,7 +83,7 @@ The solution to the FII is highlighted in green in the image below.
 
 ![image](labreport2solution.png)
 
-A test file was written in which there was no paranthesis after the bracket. This led to an infinite loop, with the OutofMemoryError being the symptom of the FII. Thus, the failure inducing input is when there is no paranthesis after a bracket.The bug in this case is that because of the FII, the missing close paranthesis after thebracket, the currentIndex is updated to a smaller number, which is -1, and enter an infinite loop, which is the symptom. 
+A test file was written in which there was no paranthesis after the bracket. This led to an infinite loop, with the OutofMemoryError being the symptom of the FII. Thus, the failure inducing input is when there is no paranthesis after a bracket. The bug in this case is that because of the FII, the missing close paranthesis after the bracket, the currentIndex is updated to a smaller number, which is -1, and enter an infinite loop, which is the symptom. 
 
 In order to fix this problem, an if statement is written that in the case closeParen is less than openBracket, the code will break.
 
