@@ -40,7 +40,7 @@ The second FII concerns the code looking and returning the name of an image, eve
 
 _Test File of the FII_
 
-Test file of the 'image' FII: [Link](https://github.com/Wei-Ji-Chen/markdown-parser/blob/main/test5-file.md)
+Test file of the FII: [Link](https://github.com/Wei-Ji-Chen/markdown-parser/blob/main/test5-file.md)
 
 
 _Symptom of FII_
