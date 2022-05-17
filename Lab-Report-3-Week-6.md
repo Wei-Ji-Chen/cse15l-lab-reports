@@ -65,7 +65,7 @@ Afterwards, you can log into the ieng6 account and compile and run the tests. To
 `java -cp .:lib/junit-4.13.2.jar:lib/hamcrest-core-1.3.jar org.junit.runner.JUnitCore MarkdownParseTest`
 
 The image below shows the result.
-![image](markdownparserun.png)
+![image](lab3picpicpic.png)
 
 
 Lastly, it's possible to combine scp and ssh to copy the whole directory and run the tests in one line.
