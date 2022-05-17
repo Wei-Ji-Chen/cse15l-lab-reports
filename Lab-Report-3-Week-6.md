@@ -6,7 +6,7 @@ In this lab report, we will be focusing on ieng6 remote operations. The main thr
 ### **Streamline SSH Configuration** 
 -----
 First, streamlining the SSH configuration will make logging into the ieng6 account be a much more efficient process. Normally, logging into ieng6 involves typing out `ssh cs15lsp22zzz@ieng6.ucsd.edu`
-which can be tedious when this command needs to be repeatedly used. To make this more efficient, a configuration file can be created. 
+which can be tedious when this command needs to be repeatedly used. To make this more efficient, a configuration file can be created. By putting an entry in `~/.ssh/config`, you can specify to SSH the username to use when logging into servers.
 
 My .ssh/config file image is shown below. This was edited on VSCode as seen in the image. 
 ![Image](configpic.png)
@@ -26,7 +26,10 @@ Furthermore, we can use an scp command to copy a file into the account using the
 ### **Setup Github Access from ieng6** 
 -----
 
-In order to commit and push from the command line, first, a token-based login mechanism like SSH keys must be used. A public key is added as part of the remote access lab to Github. 
+In order to commit and push from the command line, first, a token-based login mechanism like SSH keys must be used. In order to do this, first check for existing SSH keys, generate a new SSH key, before adding a new SSH key to the Github account. This link will have more information [Link](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account). 
+The goal of this is to ensure a public key is added as part of the remote access lab to Github. If this works, the git commands `git add .`, `git commmit -m`, and `git push` should be fully functioal in the terminal. `git push origin main` should also be functional in the command line after committing to push the changes to Github.
+
+First, there's the public key and the private key. Both are shown below in the images.
 
 The image below shows where the public key I made is stored in Github and my user account. 
 
@@ -49,7 +52,7 @@ A link to the resulting commit is included below.
 -----
 ### **Copy Whole Directories with scp-r** 
 -----
-Oftentimes, it's necessary to copy entire directories. To copy single files line by line using scp will be an extremenly tedious and inefficient task. In order to handle entire directories, the `scp -r` command can be used. `scp -r . cs15lsp22@ieng6.ucsd.edu:~/markdown-parse` will copy the markdown-parse directory. The r means the scp will copy recursively, the . is the source and current directory and mmarkdown-parse is specifying the name of the directory that is created remotely (in the case it doesn't exist) and copy the contents of that directory. 
+Oftentimes, it's necessary to copy entire directories. To copy single files line by line using scp will be an extremenly tedious and inefficient task. In order to handle entire directories, the `scp -r` command can be used. `scp -r . cs15lsp22@ieng6.ucsd.edu:~/markdown-parse` will copy the markdown-parse directory. The r means the scp will copy recursively, the . is the source and current directory and markdown-parse is specifying the name of the directory scp is creating on the remote server (in the case it doesn't exist) and copy the contents of this directory there. 
 
 The image below shows copying the markdown-parser directory into the ieng6 account. 
 
