@@ -58,11 +58,22 @@ The image below shows copying the markdown-parser directory into the ieng6 accou
 
 ![image](markdownparsepic.png)
 
-Afterwards, logging into the ieng6 account and compiling and running the tests. The image below shows the result.
+Afterwards, you can log into the ieng6 account and compile and run the tests. To log into the ieng6 account, just do `ssh ieng6` and then the following commands to compile and run the tests: 
 
+`javac -cp .:lib/junit-4.13.2.jar:lib/hamcrest-core-1.3.jar MarkdownParseTest.java`
+
+`java -cp .:lib/junit-4.13.2.jar:lib/hamcrest-core-1.3.jar org.junit.runner.JUnitCore MarkdownParseTest`
+
+The image below shows the result.
 ![image](markdownparserun.png)
 
-Lastly, it's possible to combine scp and ssh to copy the whole directory and run the tests in one line. The image below shows the results.
+
+Lastly, it's possible to combine scp and ssh to copy the whole directory and run the tests in one line.
+
+`scp -r *.java *.md lib/ ieng6:markdown-parser; ssh ieng6 "cd markdown-parser/; /software/CSE/oracle-java-17/jdk-17.0.1/bin/javac -cp .:lib/junit-4.13.2.jar:lib/hamcrest-core-1.3.jar MarkdownParseTest.java; /software/CSE/oracle-java-17/jdk-17.0.1/bin/java -cp .:lib/junit-4.13.2.jar:lib/hamcrest-core-1.3.jar org.junit.runner.JUnitCore MarkdownParseTest"`
+
+
+ The image below shows the results.
 
 ![image](markdownparserun.png)
 
