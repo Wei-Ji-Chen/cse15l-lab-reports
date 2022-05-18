@@ -37,7 +37,7 @@ The image below shows where the public key I made is stored in Github and my use
 
 The image below shows where the private key I made is stored in my user account. 
 
-#![image](privatekey.png)
+![image](privatekey.pngblah)
 
 Now, since the keys have been established, git commands for commit and push can be ran in the terminal. In my case, I made a change to the SkillDemo file by adding a second test file, called test2. 
 
