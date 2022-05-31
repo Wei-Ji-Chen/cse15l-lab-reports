@@ -1,4 +1,9 @@
-## **Week 8 Lab Report 4** 
+## **MarkDownParse Snippets** 
+----------------
+
+In this report, three MarkdownPrase snippets of code will be run with a test of each snippet. The tests will be run against my implementation of markdown-parse and the reviewed implementation of another markdown-parse. In total, there will be six tests total, three tests for my implementation of markdown-parse and another three tests for the reviewed implementation of markdown-parse. 
+
+For each snippet of code, there will be five sections, 1) Expected Output, 2) Test in MarkdownParse, 3) Output of Test in my implementation, 4) Output of Test in the reviewed implementation, and 5) Code Changes to make it work. 
 
 ------
 
@@ -8,10 +13,9 @@ A link to my markdown-parse repository:
 A link to the reviewed markdown-parse repository: 
 [Link](https://github.com/aejiang/markdown-parser)
 
-
-----
-
-Snippet 1
+--------------
+## Snippet 1 ## 
+---------------
 
 `[a link`](url.com)
 
@@ -21,9 +25,51 @@ Snippet 1
 
 [`code]`](ucsd.edu)
 
------
+-------------
+**Expected Output**
 
-Snippet 2
+The expected output of Snippet 1 is three links: 
+` 'google.com, google.com, ucsd.edu`
+
+![image](lab4pic1.png)
+
+-----
+**Test in MarkdownParseTest.java** 
+
+The image below shows the code for how it was turned into a test in MarkdownParseTest.java
+
+![image](lab4s1test1.png)
+
+----------
+**Output of Test in my implementation** 
+
+The image below shows the result of running the test 
+
+![image](lab4s1our.png)
+
+The image shows that the test does not run in my implementation 
+
+
+---------------
+**Output of Test in the reviewed implementation** 
+
+The image below shows the result of running the test 
+
+![image](lab4s1their.png)
+
+The image shows that the test does not run for the reviewed implementation 
+
+-------------
+**Code Change to Fix Program**
+
+To make the program work, the code contained within the backticks need to be checked. It need to check if the code within the backticks change the markdown link. A link will need to have [] and () and if the backticks changes either the bracket or paranthesis, the markdownlink doesn't work. 
+
+Specifically, we can check if there is a [] after removing the inside content of ``. In the case that's true, then the content inside () will be printed out. Else, the line is skipped. The problem that's causing the program to not produce the expected output is that the backticks could cause the contents inside the brackets and paranthesis to not generate a link. 
+
+-------------------
+## Snippet 2 ##
+
+-------------
 
 [a [nested link](a.com)](b.com)
 
@@ -31,10 +77,48 @@ Snippet 2
 
 [some escaped \[ brackets \]](example.com)
 
-------
+-------------
+**Expected Output**
+
+The expected output of Snippet 2 is three links: 
+`a.com, a.com(()), example.com`
+
+![image](lab4s2out.png)
+
+---------------
+**Test in MarkdownParseTest.java** 
+
+The image below shows the code for how it was turned into a test in MarkdownParseTest.java
+
+![image](lab4s2test2.png)
+
+---------------
+**Output of Test in my implementation** 
+
+![image](lab4s2our.png)
+
+As evident, the test does not work in my implementation.
+
+---------------
+**Output of Test in the reviewed implementation** 
+
+![image](lab4s2their.png)
+
+As the image shows, the test does not work in the reviewed implementation
+
+-------------
+**Code Change to Fix Program**
+
+The code changes needed to fix this is to check if brackets or paranthesis or escaped brackets are a closing pair. This means that the contents contained inside of brackets, paranthesis, or escaped brackets are closed. 
+
+Specifically, a function could be added that counts the open paranthesis and closed paranthesis. It should count +1 everytime an opened paranthesis appears and -1 when a closed paranthesis appears. The output will be the content when the count starts (when count is 0). Everything that's one index after \ will be removed. If a bracket still exists, what's inside the parantheses will be outputted. 
 
 
-Snippet 3
+--------------
+
+## Snippet 3 ##
+--------------
+
 
 [this title text is really long and takes up more than 
 one line
@@ -60,5 +144,40 @@ And there's still some more text after that.
 )
 
 And then there's more text
+
+
+----------------
+**Expected Output**
+
+![image](lab4s3out.png)
+
+-------------------
+**Test in MarkdownParseTest.java** 
+
+The image below shows the code for how it was turned into a test in MarkdownParseTest.java
+
+![image](lab4s3test3.png)
+
+------------------
+**Output of Test in my implementation** 
+
+![image](lab4s3our.png)
+
+The image shows that the test does not work in my implementation
+
+---------------
+**Output of Test in the reviewed implementation** 
+
+![image](lab4s3their.png)
+
+The image shows that the test does not work for the reviewed implementation
+
+-------------
+**Code Change to Fix Program**
+
+An if statement can be written to check if there are newlines within the brackets [] or paranthesis (). If there is, skip the line, else, the contents within () are printed out. 
+
+------------
+
 
 
