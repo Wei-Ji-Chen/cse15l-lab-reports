@@ -172,7 +172,7 @@ The image shows that the test does not work for the reviewed implementation
 -------------
 **Code Change to Fix Program**
 
-An if statement can be written to check if there are newlines within the brackets [] or paranthesis (). If there is, skip the line, else, the contents within () are printed out. 
+An if statement can be written to check if there are newlines within the brackets [] or paranthesis (). If there is, skip the line, else, the contents within () are printed out. The problem is that with newlines, it separates various parts of the code, such as paranthesis and brackets. Thus, the code change necessary is to check for newlines in the paranthesis and brackets. 
 
 ------------
 
