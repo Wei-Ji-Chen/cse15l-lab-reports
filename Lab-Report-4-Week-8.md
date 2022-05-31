@@ -62,9 +62,9 @@ The image shows that the test does not run for the reviewed implementation
 -------------
 **Code Change to Fix Program**
 
-To make the program work, the code contained within the backticks need to be checked. It need to check if the code within the backticks change the markdown link. A link will need to have [] and () and if the backticks changes either the bracket or paranthesis, the markdownlink doesn't work. 
+To make the program work, the code contained within the backticks need to be checked. It need to check if the code within the backticks changes the markdown link. A link will need to have [] and () and if the backticks changes either the bracket or paranthesis, the markdownlink doesn't work. 
 
-Specifically, we can check if there is a [] after removing the inside content of ``. In the case that's true, then the content inside () will be printed out. Else, the line is skipped. The problem that's causing the program to not produce the expected output is that the backticks could cause the contents inside the brackets and paranthesis to not generate a link. 
+To be more specific, the problem that's causing the program to not produce the expected output is that the backticks could cause the contents inside the brackets and paranthesis to not generate a link. If the backticks change the bracket or paranthesis so that they are no longer in the link, the markdown link wouldn't work. Therefore, the code change of checking if the backticks change the markdown link is necessary to make the program run
 
 -------------------
 ## Snippet 2 ##
@@ -109,10 +109,7 @@ As the image shows, the test does not work in the reviewed implementation
 -------------
 **Code Change to Fix Program**
 
-The code changes needed to fix this is to check if brackets or paranthesis or escaped brackets are a closing pair. This means that the contents contained inside of brackets, paranthesis, or escaped brackets are closed. 
-
-Specifically, a function could be added that counts the open paranthesis and closed paranthesis. It should count +1 everytime an opened paranthesis appears and -1 when a closed paranthesis appears. The output will be the content when the count starts (when count is 0). Everything that's one index after \ will be removed. If a bracket still exists, what's inside the parantheses will be outputted. 
-
+The code changes needed to fix this is to check if brackets or paranthesis or escaped brackets are a closing pair. This means that the contents contained inside of brackets, paranthesis, or escaped brackets are closed. Without the brackets, paranthesis, or escaped brackets closing the contents inside, it will affect the markdownlinks. 
 
 --------------
 
