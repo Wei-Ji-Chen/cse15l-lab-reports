@@ -1,13 +1,16 @@
 ### Lab Report 5 ###
 
 ------------------------------
-In this lab report, there will be two tests ran within MarkdownParse. The four goals of each tests is 1) Describe which implementation is correct, or neither if both give the wrong output, 2) Indicate both actual outputs and also what the expected output is, and 3) show what it should produce using commonmark.js, 4) For the implementation that’s not correct, the bug will be described in 2-3 sentences and the code that should be fixed will be shown (screenshot of code highlighting where the change needs to be made)
+In this lab report, there will be two tests chosen 
+from the 652 tests. These two tests, when ran, resulted in different answers between my implementation and the provided implementation.
+
+ The four goals of each test is 1) Describe which implementation is correct, 2) Indicate both actual outputs and also what the expected output is, 3) show what it should produce using CommonMark.js, 4) For the implementation that’s not correct, the bug will be described in 2-3 sentences and the code that should be fixed will be shown (screenshot of code highlighting where the change needs to be made)
 
 ---------------------------
 
 I found the different test results by using vimdiff on the results of running a bash for loop. 
 
-I ran `bash script.sh > results.txt` to create a .txt file. By running `script.sh` in my repository, I have now two `results.txt` files, one I generated and another from the provided implementation. To compare the results line by line, I used vimdiff to find any differences. 
+I ran `bash script.sh > results.txt` to create a .txt file. By running `script.sh` in my repository, I have now two .txt files, one I generated and another from the provided implementation. To compare the results line by line, I used vimdiff to find any differences. 
 
 ----------------
 
